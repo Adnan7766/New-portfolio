@@ -1,0 +1,925 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@700&display=swap');
+
+/* Set default font and styles for the entire page */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Apply smooth scrolling behavior to anchor links */
+html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #222;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar .max-width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar .logo a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+.logo span{
+    color: rgb(177, 2, 2);
+}
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.navbar .menu-btn1{
+    display: none;
+}
+.navbar .menu li {
+    margin-right: 60px;
+}
+
+.navbar .menu li:last-child {
+    margin-right: 0;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    transition: .5s ease-in-out;
+}
+.navbar .menu a:hover{
+    color: rgb(177, 2, 2);
+}
+
+/* Hamburger menu styles */
+.navbar .menu-btn {
+  
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Sticky navbar animation */
+.sticky {
+    animation: fadeIn 0.5s ease;
+    background-color: #222;
+}
+
+/* Scroll-up button styles */
+.scroll-up-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #f06529;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-up-btn.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-up-btn i {
+    font-size: 24px;
+}
+
+/* Home section styles */
+.home {
+    background: url(img-2.jpg);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+/* Style for the image container */
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Style for the image */
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+.home img {
+    z-index: 2; /* Place the image above the overlay */
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto;
+}
+
+ .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* max-width: 1200px; */
+    width: 100%;
+    padding: 0 20px;
+    flex: 1;
+}
+/* .image-overlay {
+    position: absolute;
+    top: 80px;
+    right: 39px;
+     width: 70%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);  
+    z-index: 1;
+    
+} */
+
+/* Apply styles to the left content */
+.home .left-content {
+    flex: 1;
+    text-align: left; /* Adjust text alignment */
+}
+
+.home .left-content .text-1 {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.typing,
+.typing-2 {
+    color: rgb(177, 2, 2);
+    font-weight: bold;
+}
+
+.home .left-content .text-2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.home .left-content .text-3 {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.home .left-content a {
+    background-color: #f06529;
+    color: #111111;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: .3s ease-in;
+   
+}
+
+.home .left-content a:hover {
+    background-color: transparent;
+    border: 1px solid rgb(177, 2, 2);
+    color: rgb(177, 2, 2);
+}
+.right-content{
+    height: 100%;
+}
+/* Apply styles to the right content (image) */
+.home .right-content img {
+    max-width: 100%;
+    height: 97vh;
+}
+
+
+/* About section styles */
+.about {
+    padding: 130px 0;
+    padding-bottom: 230px; 
+   text-align: center;
+    
+}
+
+.about .about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    flex-wrap: wrap;
+    margin-left: 100px;
+}
+
+/* .about .coloumn {
+   
+    padding: 0 20px;
+} */
+ .img-content2 img{
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+    border-radius: 6zpx;
+ }
+.about .text {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    color: #777;
+    line-height: 1.6;
+   
+}
+ 
+.para{
+    justify-content: center;
+     text-align: justify;
+    width: 70%;
+}
+.about .title1  {
+    text-align: center !important;
+    margin-top: 0; 
+    margin-bottom: 50px !important;
+    justify-content: center;
+    margin: auto;
+    
+  
+}
+.about .title1 h2{
+    font-size: 34px;
+}
+.about .title1 span{
+    color: rgb(177, 2, 2);
+}
+.about a {
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #f06529;
+    color: #0e0d0d;
+    padding: 10px 20px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 5px;
+   
+    transition: background-color 0.3s ease;
+}
+.scroll-up-btn:hover {
+    background-color: #0056b3;
+}
+.about a:hover {
+    background-color: #d9561e;
+}
+
+/* Services section styling */
+.services {
+    background-color: black;
+    padding: 100px 0;
+}
+
+.services .max-width {
+    text-align: center;
+}
+
+.services .title {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+  
+}
+
+.services .service-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.services .card {
+    flex: 1;
+    margin: 20px;
+    background-color: #38373775;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(68, 67, 67, 0.4);
+    transition: background-color .7s  ease-out;
+}
+
+.services .card .box {
+    margin-top: 20px;
+    color: white;
+}
+.services .card:hover{
+    background-color:rgb(177, 2, 2) ;
+}
+.services .card .box i {
+    font-size: 40px;
+    color: rgb(177, 2, 2);
+    margin-bottom: 10px;
+}
+.services .card .box:hover i {
+    color: rgb(253, 251, 251);
+}
+
+.services .card .box:active i {
+    color: rgb(253, 251, 251); /* Change 'your-desired-color' to the color you want when clicked */
+}
+
+.services .card .box .text {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.services .card p {
+   
+    font-size: 18px;
+    color: white;
+}
+
+/* Skills section styling */
+.skills .max-width{
+    text-align: center;
+   
+}
+.skills{
+    padding-bottom: 230px; 
+    margin-top: 90px;
+}
+.coloumn-right{
+    width: 30%;
+    margin-right: 30px;
+}
+.skills-content {
+    display: flex !important;
+    
+    flex-wrap: wrap !important;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.skills .coloumn-left {
+    flex: 1;
+    padding: 0 20px;
+    margin-left: 10px;
+   
+}
+.title{
+    font-size: 40px !important;
+    font-weight: 700;
+}
+.skills-content .coloumn-left p{
+    width: 60%;
+    font-size: 20px ;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.skills .skills-content a{
+    padding: 15px;
+    background-color: #f06529;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.skills-content a:hover{
+  
+    background-color: #d9561e;
+}
+.skills .text {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    width: 70%;
+}
+
+.skills .bars {
+    /* display: flex;
+    align-items: center; */
+    margin-bottom: 10px;
+}
+
+.skills .info {
+     flex: 1;
+    display: flex;
+     justify-content: space-between; 
+    align-items: center;
+    margin-right: 10px;
+}
+
+.skills .info span {
+    font-weight: 500;
+} *
+
+.skills .line {
+    flex: 2;
+    height: 8px;
+    background-color: #333;
+    border-radius: 25px;
+    position: relative;
+    top: 2px;
+}
+
+.skills .line.html {
+    background-color: #f06529;
+}
+
+.skills .line.css {
+    background-color: #2c8dbc;
+}
+
+.skills .line.js {
+    background-color: #f0db4f;
+}
+
+.skills .line.Bootstrap {
+    background-color: #7952b3;
+}
+
+.skills .line.Python {
+    background-color: #3776ab;
+}
+
+/* Teams section styling */
+.teams {
+    background-color: #f5f5f5;
+    padding: 100px 0;
+}
+
+.teams .max-width {
+    text-align: center;
+}
+.teams{
+    background-color: black;
+}
+.teams .title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.teams .carsoul {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.teams .card {
+    flex: 1;
+    max-width: 400px;
+    background-color: #38373775;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color .7s  ease-out;
+}
+.teams .card:hover{
+    background-color: rgb(177, 2, 2) ;
+}
+.teams .card img {
+    margin: auto;
+    max-width: 60%;
+    height: auto;
+    border: 2px solid   #f06529;
+    border-radius: 50%;
+}
+
+.teams .box .text {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 20px;
+    color: white;
+}
+
+.teams .box p {
+    font-size: 19px;
+    color: white;
+    text-align: initial
+}
+
+/* Contact section styling */
+.contact {
+    padding: 100px 0;
+    background-color: #111;
+    color: #fff;
+}
+
+.contact .max-width {
+    display: flex;
+    flex-direction: column;
+     
+    
+    align-items: center;
+}
+
+.contact .title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.contact-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.contact-content .coloumn-left {
+   
+    width: 50%;
+    flex: 1;
+    padding: 0 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.coloumn-right{
+    width: 40%;
+}
+.contact .text {
+     
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.coloumn-left p{
+    font-size: 20px;
+     text-align: start;
+}
+.contact .icons {
+    margin-top: 30px;
+}
+
+div.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact .row i {
+    font-size: 24px;
+    color: #f06529;
+    margin-right: 10px;
+}
+
+.contact .info {
+    font-size: 18px;
+}
+
+.contact .sub-title {
+    font-size: 16px;
+    color: #777;
+}
+
+.contact form {
+    margin-top: 30px;
+}
+
+.contact .fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact .field {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: #f06529;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #d9561e;
+}
+
+ 
+/* Footer styles */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #f06529;
+    text-decoration: none;
+}
+.container {
+    width: 100%; /* Adjust to your desired width */
+}
+/* Animation for sticky navbar */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* Add this CSS to your stylesheet to center the menu in a column on tablet and below */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none; /* Hide the menu by default on tablet and smaller screens */
+        flex-direction: column; /* Display menu items as a column */
+        background-color: #222; /* Background color for the menu */
+        position: absolute; /* Position the menu absolutely */
+        top: 70px; /* Adjust the top position to your liking */
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .navbar .menu.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    .menu-btn1 {
+        display: flex !important;
+        flex-direction: column;
+        cursor: pointer; /* Show the menu button in its original position on tablet and below */
+        color: white;
+    }
+
+    .menu-btn1 i {
+        color: white;
+    }
+
+   
+
+    .menu-btn1 .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 4px 0;
+        transition: 0.4s;
+        font-size: 24px;
+        color: white; /* Adjust the font size and color of the menu button icon on tablet and below */
+    }
+
+    .menu-btn {
+        display: none;
+        color: white; /* Hide the bar icon initially on tablet and below */
+    }
+    
+    /* Hide the menu items by default */
+    .menu li {
+        display: none;
+    }
+
+    /* Show the menu items when the menu is active */
+    .menu.active li {
+        display: block;
+    }
+}
+@media screen and (max-width:768px){
+    .contact-content{
+        
+        flex-direction: column;
+        justify-content: center;
+         
+    }  
+    .home .right-content img {
+        width: 100%;
+        height: 70vh;
+    }
+    .coloumn-left{
+        width: 100%;
+        margin: auto;
+    }
+    .coloumn-right{
+        width: 70%;
+        margin: auto;
+    }
+    .contact-content .coloumn-left{
+        margin-left: 0 !important;
+    }
+}
+ /* Existing styles for larger screens */
+
+/* Add this CSS to make the "About Me" section responsive */
+@media screen and (max-width: 425px) {
+    .about .about-content {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+    .about .title1 h2{
+        font-size: 24px;
+    }
+    .about{
+        text-align: start;
+    }
+    .title{
+        font-size: 24px !important;
+    }
+    
+    .about .text {
+        font-size: 20px;
+    }
+
+    .img-content2 img {
+        width: 120px !important;
+        height: 150px !important;
+         
+    }
+    /* .home .left-content .text-2 {
+        font-size: 30px;
+         
+    } */
+    .contact-content .coloumn-left{
+width: 100%;
+    }
+    .image-container{
+        position:  absolute;
+    }
+    .home .left-content .text-3 {
+        font-size: 14px !important;
+    }
+    .home .left-content .text-2 {
+        font-size: 20px;
+    }
+    .home .left-content .text-1 {
+        font-size: 14px !important;
+    }
+    .home .left-content a{
+        font-size: 12px;
+    }
+    .home .left-content{
+        text-align: center;
+    }
+    .home {
+        height: 80vh;
+        text-align: justify;
+    }
+    .home .right-content img {
+        width: 70%;
+        height: 35vh;
+    }
+    .home .left-content .text-1 {
+        font-size: 18px;
+    }
+    .home .left-content .text-1 {
+        font-size: 18px;
+         }
+         .home .left-content .text-1 {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.services .service-content{
+    flex-direction: column;
+}
+.para{
+    text-align: justify;
+    margin-left: 20px;
+    width: 80%;
+}
+.container{
+    align-items: flex-start;
+}
+    .about a {
+        margin-top: 20px;
+        padding: 10px 15px; /* Adjust the padding as needed for smaller screens */
+        font-size: 16px; /* Adjust the font size for smaller screens */
+    }
+    .teams .card{
+        max-width: 300px;
+        margin: auto;
+    }
+    .skills-content .coloumn-left p{
+        width: 80%;
+    }
+    .skills .text{
+        width: 100%;
+    }
+    .skills .skills-content a{
+        padding: 10px;
+    }
+}
+
+ 
+
+@media screen and (max-width:650px){
+    .img-content2 img {
+        width: 200px;
+        height: 200px;
+
+    }
+    .about a {
+        
+        padding: 10px ;
+        
+       
+    }
+}
+@media screen and (max-width: 320px) {
+    /* Other CSS rules here */
+
+    .home .left-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align items horizontally */
+        text-align: center; /* Center align text */
+    }
+
+    .home .left-content a {
+        font-size: 18px; /* Adjust the font size if needed */
+        width: 200px !important; /* Set a fixed width for the button in pixels */
+        padding: 10px 20px; /* Adjust padding as needed */
+        margin-top: 10px; /* Add some space between text and button */
+    }
+
+    .home .left-content img {
+        width: 70%; /* Adjust the width of the image */
+        height: auto;
+    }
+
+
+    .home .left-content .text-2 {
+        font-size: 23px;
+    }
+    .home .left-content .text-3 {
+        font-size: 18px; /* Change text-3 instead of text-2 */
+    }
+     
+}
